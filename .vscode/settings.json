@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
 	"typescript.format.enable": false
+=======
+	"editor.formatOnSave": true
+>>>>>>> 368ea12... chore: Initial Commit
 }
