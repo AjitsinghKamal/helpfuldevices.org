@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"workspaces": [
-		"server",
+		"helpfuldevices-cms",
 		"helpfuldevices-website",
 		"helpfuldevices-website-theme"
 	],
