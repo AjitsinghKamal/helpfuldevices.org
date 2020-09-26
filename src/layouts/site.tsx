@@ -3,7 +3,9 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Header from "../components/header";
 
-const DefaultLayout = ({ children }) => {
+import { Props } from "../globals/interfaces";
+
+export default ({ children }: Props) => {
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -17,7 +19,7 @@ const DefaultLayout = ({ children }) => {
 			}
 		}
 	`);
-	console.log(data.site.siteMetadata);
+
 	return (
 		<>
 			<Header
@@ -28,5 +30,3 @@ const DefaultLayout = ({ children }) => {
 		</>
 	);
 };
-
-export default DefaultLayout;

@@ -1,14 +1,12 @@
 import React from "react";
 
-import Layout from "../layouts/default";
+import Site from "../layouts/site";
 import SEO from "../components/seo";
 import HomeView from "../templates/home";
 
-const HomePage = () => (
-	<Layout>
+export default () => (
+	<Site>
 		<SEO title="Home" />
 		<HomeView />
-	</Layout>
+	</Site>
 );
-
-export default HomePage;

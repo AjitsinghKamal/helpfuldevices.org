@@ -1,4 +1,7 @@
+/** @jsx jsx */
+
 import React from "react";
+import { jsx, Flex, Container, Box } from "theme-ui";
 
 import { Link } from "gatsby";
 import { NavItem } from "../globals/interfaces";
@@ -7,14 +10,14 @@ interface Props {
 	items?: NavItem[];
 }
 
-export default function Nav({ items }: Props) {
+export default ({ items = [] }: Props) => {
 	return (
-		<nav>
+		<Flex as="nav" ml={4}>
 			{items.map((item: NavItem, index: number) => (
-				<Link to={item.link} key={index}>
+				<Link to={item.link} key={index} sx={{ fontWeight: "medium" }}>
 					{item.label}
 				</Link>
 			))}
-		</nav>
+		</Flex>
 	);
-}
+};

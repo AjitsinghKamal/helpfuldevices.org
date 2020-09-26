@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: 'HelpfulDevices',
+		title: 'Helpful Devices',
 		description: '',
 		author: '@ajitsinghkamal',
 		navigation: [
