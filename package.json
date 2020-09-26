@@ -1,0 +1,12 @@
+{
+	"private": true,
+	"workspaces": [
+		"server",
+		"helpfuldevices-website",
+		"helpfuldevices-website-theme"
+	],
+	"dependencies": {
+		"react": "^17.0.0-rc.2",
+		"react-dom": "^17.0.0-rc.2"
+	}
+}
