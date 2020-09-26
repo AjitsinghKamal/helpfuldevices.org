@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import React from "react";
+import { jsx, Flex, Container, Box } from "theme-ui";
 
 import Nav from "./nav";
 import Brand from "./brand";
@@ -10,11 +12,15 @@ interface Props {
 	siteNav: NavItem[];
 }
 
-const Header = ({ siteTitle, siteNav }: Props) => (
-	<header>
-		<Brand siteTitle={siteTitle} />
-		<Nav items={siteNav} />
-	</header>
-);
-
-export default Header;
+export default ({ siteTitle, siteNav }: Props) => {
+	return (
+		<Box as="header" bg="primary" color="muted">
+			<Container>
+				<Flex p={3} sx={{ alignItems: "center", height: "header" }}>
+					<Brand siteTitle={siteTitle} />
+					<Nav items={siteNav} />
+				</Flex>
+			</Container>
+		</Box>
+	);
+};

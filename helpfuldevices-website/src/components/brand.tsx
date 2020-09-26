@@ -1,9 +1,14 @@
+/** @jsx jsx */
+
 import React from "react";
+import { jsx } from "theme-ui";
 
 interface Props {
 	siteTitle: string;
 }
 
-const Header = ({ siteTitle }: Props) => <div>{siteTitle}</div>;
-
-export default Header;
+export default ({ siteTitle }: Props) => (
+	<div>
+		<p sx={{ fontWeight: "bold", fontSize: 6, mb: 0 }}>{siteTitle}</p>
+	</div>
+);

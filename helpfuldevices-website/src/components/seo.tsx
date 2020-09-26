@@ -16,7 +16,7 @@ interface Props {
 	title?: string;
 }
 
-const SEO = ({ description, lang, meta = [], title }: Props) => {
+export default ({ description, lang, meta = [], title }: Props) => {
 	const { site } = useStaticQuery(
 		graphql`
 			query {
@@ -40,7 +40,7 @@ const SEO = ({ description, lang, meta = [], title }: Props) => {
 				lang,
 			}}
 			title={title}
-			titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+			titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
 			meta={[
 				{
 					name: "description",
@@ -79,5 +79,3 @@ const SEO = ({ description, lang, meta = [], title }: Props) => {
 		/>
 	);
 };
-
-export default SEO;

@@ -5,6 +5,8 @@ html {
 		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	box-sizing: border-box;
 	overflow-y: scroll;
+	height: 100%;
+	width: 100%;
 }
 
 * {
@@ -19,6 +21,7 @@ html {
 
 body {
 	margin: 0;
+	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: hsla(0, 0%, 0%, 0.8);
@@ -31,6 +34,8 @@ body {
 	-ms-font-feature-settings: "kern", "liga", "clig", "calt";
 	-webkit-font-feature-settings: "kern", "liga", "clig", "calt";
 	font-feature-settings: "kern", "liga", "clig", "calt";
+	height: 100%;
+	width: 100%;
 }
 article,
 aside,
@@ -65,6 +70,8 @@ template {
 }
 a {
 	background-color: transparent;
+	text-decoration: none;
+	color: inherit;
 	-webkit-text-decoration-skip: objects;
 }
 a:active,
