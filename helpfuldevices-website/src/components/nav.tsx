@@ -14,7 +14,11 @@ export default ({ items = [] }: Props) => {
 	return (
 		<Flex as="nav" ml={4}>
 			{items.map((item: NavItem, index: number) => (
-				<Link to={item.link} key={index} sx={{ fontWeight: "medium" }}>
+				<Link
+					to={item.link}
+					key={index}
+					sx={{ fontWeight: "medium", fontSize: 3 }}
+				>
 					{item.label}
 				</Link>
 			))}

@@ -14,9 +14,20 @@ interface Props {
 
 export default ({ siteTitle, siteNav }: Props) => {
 	return (
-		<Box as="header" bg="primary" color="muted">
-			<Container>
-				<Flex p={3} sx={{ alignItems: "center", height: "header" }}>
+		<Box
+			as="header"
+			bg="primary"
+			color="muted"
+			sx={{
+				position: "fixed",
+				top: 0,
+				left: 0,
+				right: 0,
+				zIndex: 10,
+			}}
+		>
+			<Container sx={{ width: "95%" }}>
+				<Flex py={3} sx={{ alignItems: "center", height: "header" }}>
 					<Brand siteTitle={siteTitle} />
 					<Nav items={siteNav} />
 				</Flex>
