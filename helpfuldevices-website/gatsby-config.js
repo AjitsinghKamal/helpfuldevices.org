@@ -5,10 +5,14 @@ module.exports = {
 		author: '@ajitsinghkamal',
 		navigation: [
 			{
+				link: '/',
+				label: 'Home',
+			},
+			{
 				link: '#',
 				label: 'Contact',
-			}
-		]
+			},
+		],
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',

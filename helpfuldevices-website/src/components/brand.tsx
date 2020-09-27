@@ -1,14 +1,27 @@
 /** @jsx jsx */
 
-import React from "react";
-import { jsx } from "theme-ui";
+import React from 'react';
+import { jsx } from 'theme-ui';
 
 interface Props {
 	siteTitle: string;
+	fontSize?: number;
 }
 
-export default ({ siteTitle }: Props) => (
+export default ({ siteTitle, fontSize = 6 }: Props) => (
 	<div>
-		<p sx={{ fontWeight: "bold", fontSize: 6, mb: 0 }}>{siteTitle}</p>
+		<p
+			sx={{
+				fontWeight: 'heading',
+				fontSize,
+				mb: 0,
+				fontFamily: 'body',
+				letterSpacing: '1.2px',
+				wordSpacing: '5px',
+				textTransform: 'uppercase',
+			}}
+		>
+			{siteTitle}
+		</p>
 	</div>
 );

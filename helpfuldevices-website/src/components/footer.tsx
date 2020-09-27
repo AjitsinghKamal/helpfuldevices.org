@@ -2,7 +2,7 @@
 import React from 'react';
 import { jsx, Flex, Container, Box } from 'theme-ui';
 
-import Nav from './nav';
+import Nav, { Direction } from './nav';
 import Brand from './brand';
 
 import { NavItem } from '../globals/interfaces';
@@ -14,23 +14,18 @@ interface Props {
 
 export default ({ siteTitle, siteNav }: Props) => {
 	return (
-		<Box
-			as="header"
-			bg="primary"
-			color="muted"
-			sx={{
-				position: 'fixed',
-				top: 0,
-				left: 0,
-				right: 0,
-				zIndex: 10,
-				boxShadow: 'header',
-			}}
-		>
+		<Box as="footer" bg="primary" color="muted" py={5}>
 			<Container sx={{ width: '95%' }}>
-				<Flex py={3} sx={{ alignItems: 'center', height: 'header' }}>
-					<Brand siteTitle={siteTitle} />
-					<Nav items={siteNav} />
+				<Flex
+					sx={{
+						height: 'header',
+						alignItems: 'flex-start',
+					}}
+				>
+					<Brand siteTitle={siteTitle} fontSize={4} />
+					<Box ml={5}>
+						<Nav items={siteNav} direction={Direction.vertical} fontSize={2} />
+					</Box>
 				</Flex>
 			</Container>
 		</Box>
